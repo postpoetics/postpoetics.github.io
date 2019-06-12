@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>POST POETICS</title>
+	<link rel="stylesheet" type="text/css" href="./index.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- <link rel="shortcut icon" href="http://localhost:8888/postpoetics/wordpress/postpoeticsimage/pp_favicon.ico"> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
+	<script type="text/javascript" src="http://postpoetics.kr/index.js"></script>
+</head>
+<body>
+
+<div class="container">
+	<div class="item" id="grid1">
+		Post Poetics<br>
+		Our website is under construction.<br><br>
+		Office<br>
+		31-1 Sowol-ro, Jung-gu, Seoul 04635<br>
+		<a href="tel:8223227024">+82 (0)2 322 7024</a><br>
+		<a href="mailto:info@postpoetics.kr">info@postpoetics.kr</a><br>
+	</div>
+	<div class="item" id="grid2">
+
+		Shop<br>
+		240 Itaewon-ro, Yongsan-gu, Seoul 04400<br>
+		<a href="tel:8223227023">+82 (0)2 322 7023</a><br>
+		<a href="mailto:shop@postpoetics.kr">shop@postpoetics.kr</a><br>
+		
+		Instagram <a href="http://www.instagram.com/postpoetics" target="_blank">@postpoetics</a><br><br>
+		©2019 <a href="http://sonayong.com" target="_blank">Son Ayong</a> for Post Poetics
+	</div>
+</div>
+<div class="book" id="book0"></div>
+<div class="book" id="book1"></div>
+<!-- <div class="book" id="book2"></div> -->
+<div class="book" id="book3"></div>
+<div class="book" id="book4"></div>
+<div class="book" id="book5"></div>
+<div class="book" id="book6"></div>
+<div class="book" id="book7"></div>
+<div class="book" id="book8"></div>
+<div class="book" id="book9"></div>
+<div class="book" id="book10"></div>
+<div class="book" id="book11"></div>
+<div class="book" id="book12"></div>
+<div class="book" id="book13"></div>
+<div class="book" id="book14"></div>
+<!-- <div class="book" id="book15"></div> -->
+<div class="book" id="book16"></div>
+<div class="book" id="book17"></div>
+
+
+<div class="container-m">
+
+	Post Poetics<br>
+	Our website is under construction.<br><br>
+
+	Office<br>
+	31-1 Sowol-ro, Jung-gu, Seoul 04635<br>
+	+82 (0)2 322 7024<br>
+	<a href="mailto:info@postpoetics.kr">info@postpoetics.kr</a><br><br>
+
+	Shop<br>
+	240 Itaewon-ro, Yongsan-gu, Seoul 04400<br>
+	+82 (0)2 322 7023<br>
+	<a href="mailto:shop@postpoetics.kr">shop@postpoetics.kr</a><br><br>
+
+	Instagram <a href="http://www.instagram.com/postpoetics" target="_blank">@postpoetics</a><br><br>
+
+	©2019 <a href="http://sonayong.com" target="_blank">Son Ayong</a> for Post Poetics<br>
+
+
+	<div id="gyroArea">
+		<div class="image">
+
+			<div class="book-m" id="book-m11">
+			</div>
+
+			<div class="book-m" id="book-m10">
+			</div>
+
+			<div class="book-m" id="book-m9">
+			</div>
+
+			<div class="book-m" id="book-m8">
+			</div>
+
+			<div class="book-m" id="book-m7">
+			</div>
+
+			<div class="book-m" id="book-m6">
+			</div>
+
+			<div class="book-m" id="book-m5">
+			</div>
+
+			<!-- <div class="book-m" id="book-m4">
+				<div class="circle"></div>
+			</div> -->
+
+			<div class="book-m" id="book-m3">
+			</div>
+
+			<div class="book-m" id="book-m2">
+			</div>
+
+			<div class="book-m" id="book-m1">
+			</div>
+
+		</div>
+		<!-- safari -->
+<!-- 		<div class="image-safari">
+			<div class="book-s" id="book-m-s11"></div>
+			<div class="book-s" id="book-m-s10"></div>
+			<div class="book-s" id="book-m-s9"></div>
+			<div class="book-s" id="book-m-s8"></div>
+			<div class="book-s" id="book-m-s7"></div>
+			<div class="book-s" id="book-m-s6"></div>
+			<div class="book-s" id="book-m-s5"></div>
+			<div class="book-s" id="book-m-s3"></div>
+			<div class="book-s" id="book-m-s2"></div>
+			<div class="book-s" id="book-m-s1"></div>			
+		</div> -->
+		<!-- safari fin -->
+
+	</div>
+</div>
+
+<script>
+	
+
+
+$(document).ready(function() {
+
+
+var ua = navigator.userAgent.toLowerCase(),
+    selectorX = $('#hourlyOffrWrper ul#myOffrAdd'); 
+  if (ua.indexOf('safari') != -1) { 
+    if (ua.indexOf('chrome') > -1) {
+      $(function(){
+  $gyroArea = $('#gyroArea');
+  $ball = $('.book-m');
+  // 자이로 센서를 사용할 경우에는 공을 기울기에 의해 움직일 수있게하는
+  var balls = $ball,
+    bounceRaito = 0.4,
+    bounceLimitSpeed = 1.5,
+    min = Math.min,
+    max = Math.max,
+    abs = Math.abs,
+    floor = Math.floor,
+    rValues = [1.0, 0.76, 0.8, 0.7, 0.6, 0.55, 0.612, 0.9, 0.65, 0.95, 0.62, 0.87, 0.33, 0.45, 0.23, 0.987, 0.67, 0.99, 0.34, 0.77, 0.69, 0.44, 1.2, 1.05],
+    ballCanMove = false,
+    areaHeight = $gyroArea.height(),
+    areaWidth = $gyroArea.width(),
+    bottomLimit = Math.floor(areaHeight - ($ball.height() + 250 )),
+    rightLimit = Math.floor(areaWidth - $ball.width());
+  // 공을 이동 사인을 낸다.
+  setTimeout(function() {ballCanMove = true; });
+  // 회전을 얻을 수 있습니다.
+  window.ondeviceorientation = function(event) {
+    // 회 전량
+    var alpha = event.alpha;   // z-axis
+    var beta = event.beta;     // x-axis
+    var gamma = event.gamma;   // y-axis
+    // 공을 달린다.
+    if (ballCanMove) {
+      balls.each(function(index, ball) {
+        // gamma 값이 양수이면 오른쪽으로, 음수이면 왼쪽으로 이동한다.
+        var oldSpeed = ball.speedX || 0;
+        var x = parseInt(ball.style.left || 0);
+        if (x === rightLimit && oldSpeed === 0 && gamma > 0) {
+          // 아무것도
+        } else if (x === 0 && oldSpeed === 0 && gamma < 0) {
+          // 아무것도
+        } else {
+          var speed = oldSpeed + ((gamma) / 100) * rValues[index%rValues.length];
+          var x = x + speed;
+          x =  max(0, min(rightLimit, x));
+          ball.style.left = x + 'px';
+          ball.speedX = speed;
+        }
+      });
+    }
+  };
+  // 장치의 방향이 바뀌면 폭의 재 계산을한다.
+  window.onorientationchange = function () {
+    //console.debug('orientationchange: is called.');
+    areaHeight = $gyroArea.height(),
+    areaWidth = $gyroArea.width(),
+    bottomLimit = Math.floor(areaHeight - $ball.height()),
+    rightLimit = Math.floor(areaWidth - $ball.width())
+  };
+});
+    } else {
+      $(function(){
+  $gyroArea = $('#gyroArea');
+  $ball = $('.book-m');
+  // 자이로 센서를 사용할 경우에는 공을 기울기에 의해 움직일 수있게하는
+  var balls = $ball,
+    bounceRaito = 0.4,
+    bounceLimitSpeed = 1.5,
+    min = Math.min,
+    max = Math.max,
+    abs = Math.abs,
+    floor = Math.floor,
+    rValues = [1.0, 0.76, 0.8, 0.7, 0.6, 0.55, 0.612, 0.9, 0.65, 0.95, 0.62, 0.87, 0.33, 0.45, 0.23, 0.987, 0.67, 0.99, 0.34, 0.77, 0.69, 0.44, 1.2, 1.05],
+    ballCanMove = false,
+    areaHeight = $gyroArea.height(),
+    areaWidth = $gyroArea.width(),
+    bottomLimit = Math.floor(areaHeight - ($ball.height() + 250 )),
+    rightLimit = Math.floor(areaWidth - $ball.width());
+  // 공을 이동 사인을 낸다.
+  setTimeout(function() {ballCanMove = true; });
+  // 회전을 얻을 수 있습니다.
+  window.ondeviceorientation = function(event) {
+    // 회 전량
+    var alpha = event.alpha;   // z-axis
+    var beta = event.beta;     // x-axis
+    var gamma = event.gamma;   // y-axis
+    // 공을 달린다.
+    if (ballCanMove) {
+      balls.each(function(index, ball) {
+        // gamma 값이 양수이면 오른쪽으로, 음수이면 왼쪽으로 이동한다.
+        var oldSpeed = ball.speedX || 0;
+        var x = parseInt(ball.style.left || 0);
+        if (x === rightLimit && oldSpeed === 0 && gamma > 0) {
+          // 아무것도
+        } else if (x === 0 && oldSpeed === 0 && gamma < 0) {
+          // 아무것도
+        } else {
+          var speed = oldSpeed + ((gamma) / 100) * rValues[index%rValues.length];
+          var x = x + speed;
+          x =  max(0, min(rightLimit, x));
+          ball.style.left = x + 'px';
+          ball.speedX = speed;
+        }
+      });
+    }
+  };
+  // 장치의 방향이 바뀌면 폭의 재 계산을한다.
+  window.onorientationchange = function () {
+    //console.debug('orientationchange: is called.');
+    areaHeight = $gyroArea.height(),
+    areaWidth = $gyroArea.width(),
+    bottomLimit = Math.floor(areaHeight - $ball.height()),
+    rightLimit = Math.floor(areaWidth - $ball.width())
+  };
+});
+    }
+  }
+
+
+});
+
+
+
+</script>
+
+
+</body>
+</html>
